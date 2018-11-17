@@ -11,7 +11,7 @@
             
             <StackLayout VerticalOptions="Center" Margin="0, 10, 0, 10">
                 <Label HorizontalTextAlignment="Center" Text=" - Or - " FontSize="Micro"  Margin="0, 0, 0, -5" />
-                <Label HorizontalTextAlignment="Center" Text="Sign in with" FontSize="Micro" />
+<!--                <Label HorizontalTextAlignment="Center" Text="Sign in with" FontSize="Micro" />-->
             </StackLayout>
             
             <Image x:Name="email" Source="sign-email.png" />

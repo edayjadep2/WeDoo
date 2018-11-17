@@ -155,5 +155,10 @@
     <BundleResource Include="Resources\you.png" />
     <BundleResource Include="Resources\doo.png" />
     <BundleResource Include="Resources\me.png" />
+    <BundleResource Include="Resources\me-top.png" />
+    <BundleResource Include="Resources\about me.png" />
+    <BundleResource Include="Resources\mydoo.png" />
+    <BundleResource Include="Resources\doo-page.png" />
+    <BundleResource Include="Resources\we-page.png" />
   </ItemGroup>
 </Project>

@@ -17,35 +17,13 @@ namespace WeDoo
                 Icon = "Icons/ic_notification.png",
                 Order = ToolbarItemOrder.Primary
             });
+            this.Children.Add(SetMePage());
             this.Children.Add(SetWePage());
-            this.Children.Add(new ContentPage
-            {
-                Title = "We",
-                Icon = "we.png",
-                Content = new StackLayout
-                {
-                    Children = {
-                    new BoxView { Color = Color.Blue },
-                    new BoxView { Color = Color.Red}
-                }
-                }
-            });
-            this.Children.Add(new ContentPage
-            {
-                Title = "Doo",
-                Icon = "doo.png",
-                Content = new StackLayout
-                {
-                    Children = {
-                    new BoxView { Color = Color.Blue },
-                    new BoxView { Color = Color.Red}
-                }
-                }
-            });
+            this.Children.Add(SetDooPage());
 
         }
 
-        ContentPage SetWePage() {
+        ContentPage SetMe2Page() {
             var contentPage = new ContentPage();
             contentPage.Icon = "me.png";
             contentPage.Title = "Eric";
@@ -68,6 +46,83 @@ namespace WeDoo
             mainlayout.Children.Add(scrollview);
             contentPage.Content = mainlayout;
             
+            return contentPage;
+        }
+
+        ContentPage SetMePage()
+        {
+            var contentPage = new ContentPage();
+            contentPage.Icon = "me.png";
+            contentPage.Title = "Eric";
+            contentPage.ToolbarItems.Add(new ToolbarItem
+            {
+                ClassId = "Notification",
+                Icon = "Icons/ic_notification.png",
+                Order = ToolbarItemOrder.Primary
+            });
+            var mainlayout = new StackLayout() { VerticalOptions = LayoutOptions.Fill };
+            mainlayout.Children.Add(new Image(){Source = "me-top.png"});
+            var segmentLayout = new StackLayout()
+            {
+                Orientation = StackOrientation.Horizontal,
+                Padding = new Thickness(10, 10, 10, 10),
+                Margin = new Thickness(0, 30, 0, 30),
+                HorizontalOptions = LayoutOptions.Fill
+
+            };
+            var lbl_aboutme = new Label() { Text = "About Me", Margin = new Thickness(50, 0, 70, 0), HorizontalOptions = LayoutOptions.Fill, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Small, typeof(EntryCell)), FontAttributes = FontAttributes.Bold };
+            var lbl_mydoo = new Label() { Text = "My Doo", Margin = new Thickness(50, 0, 0, 0), HorizontalOptions = LayoutOptions.Fill, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Small, typeof(EntryCell)), FontAttributes = FontAttributes.Bold };
+            
+            var bottom = new Image() { Source = "about me.png" };
+            lbl_aboutme.GestureRecognizers.Add(new TapGestureRecognizer {
+                Command = new Command((obj) => {
+                    lbl_aboutme.TextColor = Color.FromHex("F5A623");
+                    lbl_mydoo.TextColor = Color.FromHex("9B9B9B");
+                    bottom.Source = "about me.png";
+                    bottom.Margin = new Thickness(0, 0, 0, 0);
+                })
+            });
+            lbl_mydoo.GestureRecognizers.Add(new TapGestureRecognizer
+            {
+                Command = new Command((obj) => {
+                    lbl_mydoo.TextColor = Color.FromHex("F5A623");
+                    lbl_aboutme.TextColor = Color.FromHex("9B9B9B");
+                    bottom.Source = "mydoo.png";
+                    bottom.Margin = new Thickness(-30, -10, 0, 0);
+                })
+            });
+            lbl_aboutme.TextColor = Color.FromHex("F5A623");
+            lbl_mydoo.TextColor = Color.FromHex("9B9B9B");
+            segmentLayout.Children.Add(lbl_aboutme); 
+            segmentLayout.Children.Add(lbl_mydoo);
+            segmentLayout.BackgroundColor = Color.FromHex("FFF4E7");
+            mainlayout.Children.Add(segmentLayout);
+
+            mainlayout.Children.Add(bottom);
+            contentPage.Content = mainlayout;
+
+            return contentPage;
+        }
+
+        ContentPage SetDooPage(){
+            var contentPage = new ContentPage();
+            contentPage.Icon = "doo.png";
+            contentPage.Title = "Doo";
+            var mainlayout = new StackLayout() { VerticalOptions = LayoutOptions.Fill };
+            mainlayout.Children.Add(new Image() { Source = "doo-page.png" });
+
+            contentPage.Content = mainlayout;
+            return contentPage;
+        }
+
+        ContentPage SetWePage(){
+            var contentPage = new ContentPage();
+            contentPage.Icon = "we.png";
+            contentPage.Title = "We";
+            var mainlayout = new StackLayout() { VerticalOptions = LayoutOptions.Fill };
+            mainlayout.Children.Add(new Image() { Source = "we-page.png" });
+
+            contentPage.Content = mainlayout;
             return contentPage;
         }
 

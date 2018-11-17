@@ -11,8 +11,19 @@ namespace WeDoo
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
 
-            //facebook.GestureRecognizers.Add(new TapGestureRecognizer(OnLoginButtonClicked));
             facebook.GestureRecognizers.Add(new TapGestureRecognizer
+            {
+                Command = new Command((obj) => {
+                    App.mainNavigation.PushAsync(new MainView());
+                })
+            });
+            twitter.GestureRecognizers.Add(new TapGestureRecognizer
+            {
+                Command = new Command((obj) => {
+                    App.mainNavigation.PushAsync(new MainView());
+                })
+            });
+            email.GestureRecognizers.Add(new TapGestureRecognizer
             {
                 Command = new Command((obj) => {
                     App.mainNavigation.PushAsync(new MainView());
