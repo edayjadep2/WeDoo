@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{B454919A-FAB4-4F9C-A47B-03047C04D38E}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WeDoo/MainPage.xaml">
+    <Files>
+      <File FileName="WeDoo/App.xaml" Line="5" Column="15" />
+      <File FileName="WeDoo/App.xaml.cs" Line="14" Column="39" />
+      <File FileName="WeDoo/MainPage.xaml.cs" Line="14" Column="35" />
+      <File FileName="WeDoo/MainPage.xaml" Line="5" Column="10" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.WeDoo.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B4B725DA-AEA5-4949-B315-D9F341A61478" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.WeDoo.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" FirstBuild="True" />
+  <MultiItemStartupConfigurations />
+</Properties>
