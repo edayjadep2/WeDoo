@@ -7,11 +7,17 @@ namespace WeDoo
 {
     public partial class App : Application
     {
+        static public NavigationPage mainNavigation;
         public App()
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            //MainPage = new MainView();
+            //MainPage = new LoginPage();
+
+            mainNavigation = new NavigationPage(new LoginPage());
+            MainPage = mainNavigation;
+
         }
 
         protected override void OnStart()

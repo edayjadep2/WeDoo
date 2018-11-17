@@ -25,9 +25,4 @@
   <ItemGroup>
     <EmbeddedResource Remove="TabbedPage.xaml" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Update="WePage.xaml.cs">
-      <DependentUpon>WePage.xaml</DependentUpon>
-    </Compile>
-  </ItemGroup>
 </Project>

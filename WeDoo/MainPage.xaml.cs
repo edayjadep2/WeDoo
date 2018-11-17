@@ -12,6 +12,10 @@ namespace WeDoo
         public MainPage()
         {
             InitializeComponent();
+            var mainLayout = new RelativeLayout();
+            //mainLayout.Children.Add(new MyView());
+
+            this.Content = mainLayout;
         }
     }
 }
