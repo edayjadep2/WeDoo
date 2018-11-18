@@ -11,34 +11,34 @@ namespace WeDoo
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
 
-            facebook.GestureRecognizers.Add(new TapGestureRecognizer
-            {
+            facebook.GestureRecognizers.Add(new TapGestureRecognizer {
                 Command = new Command((obj) => {
                     App.mainNavigation.PushAsync(new MainView());
                 })
             });
-            twitter.GestureRecognizers.Add(new TapGestureRecognizer
-            {
+            twitter.GestureRecognizers.Add(new TapGestureRecognizer {
                 Command = new Command((obj) => {
                     App.mainNavigation.PushAsync(new MainView());
                 })
             });
-            email.GestureRecognizers.Add(new TapGestureRecognizer
-            {
+            email.GestureRecognizers.Add(new TapGestureRecognizer {
+                Command = new Command((obj) => {
+                    App.mainNavigation.PushAsync(new MainView());
+                })
+            });
+            vitality.GestureRecognizers.Add(new TapGestureRecognizer {
                 Command = new Command((obj) => {
                     App.mainNavigation.PushAsync(new MainView());
                 })
             });
         }
 
-        private void OnLoginButtonClicked(View view, object obj)
-        {
+        private void OnLoginButtonClicked(View view, object obj) {
             //this.Navigation.PushModalAsync(new MainView(), true);
             App.mainNavigation.PushAsync(new MainView());
         }
 
-        private void OnSignUpButtonClicked(object sender, EventArgs e)
-        {
+        private void OnSignUpButtonClicked(object sender, EventArgs e) {
 
         }
     }

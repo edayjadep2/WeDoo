@@ -8,7 +8,7 @@
             <Image Source="we-doo.png" Margin="0, 0, 0, 50"/>
             <Image x:Name="facebook" Source="facebook.png" />
             <Image x:Name="twitter" Source="twitter.png"  />
-            
+            <Image x:Name="vitality" Source="vitality.png" />
             <StackLayout VerticalOptions="Center" Margin="0, 10, 0, 10">
                 <Label HorizontalTextAlignment="Center" Text=" - Or - " FontSize="Micro"  Margin="0, 0, 0, -5" />
 <!--                <Label HorizontalTextAlignment="Center" Text="Sign in with" FontSize="Micro" />-->

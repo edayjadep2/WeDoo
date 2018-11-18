@@ -160,5 +160,8 @@
     <BundleResource Include="Resources\mydoo.png" />
     <BundleResource Include="Resources\doo-page.png" />
     <BundleResource Include="Resources\we-page.png" />
+    <BundleResource Include="Resources\vitality.png" />
+    <BundleResource Include="Resources\past-doo.png" />
+    <BundleResource Include="Resources\upcoming-doo.png" />
   </ItemGroup>
 </Project>

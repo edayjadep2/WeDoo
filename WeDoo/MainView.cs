@@ -26,7 +26,7 @@ namespace WeDoo
         ContentPage SetMe2Page() {
             var contentPage = new ContentPage();
             contentPage.Icon = "me.png";
-            contentPage.Title = "Eric";
+            contentPage.Title = "Janet";
             contentPage.ToolbarItems.Add(new ToolbarItem {
                 ClassId = "Notification",
                 Icon = "Icons/ic_notification.png",
@@ -53,7 +53,7 @@ namespace WeDoo
         {
             var contentPage = new ContentPage();
             contentPage.Icon = "me.png";
-            contentPage.Title = "Eric";
+            contentPage.Title = "Janet";
             contentPage.ToolbarItems.Add(new ToolbarItem
             {
                 ClassId = "Notification",
@@ -74,12 +74,15 @@ namespace WeDoo
             var lbl_mydoo = new Label() { Text = "My Doo", Margin = new Thickness(50, 0, 0, 0), HorizontalOptions = LayoutOptions.Fill, HorizontalTextAlignment = TextAlignment.Center, FontSize = Device.GetNamedSize(NamedSize.Small, typeof(EntryCell)), FontAttributes = FontAttributes.Bold };
             
             var bottom = new Image() { Source = "about me.png" };
+            var bottom2 = new Image() { Source = "" };
             lbl_aboutme.GestureRecognizers.Add(new TapGestureRecognizer {
                 Command = new Command((obj) => {
                     lbl_aboutme.TextColor = Color.FromHex("F5A623");
                     lbl_mydoo.TextColor = Color.FromHex("9B9B9B");
                     bottom.Source = "about me.png";
                     bottom.Margin = new Thickness(0, 0, 0, 0);
+                    bottom2.Source = "";
+                    bottom2.Margin = new Thickness(0, 0, 0, 0);
                 })
             });
             lbl_mydoo.GestureRecognizers.Add(new TapGestureRecognizer
@@ -87,8 +90,10 @@ namespace WeDoo
                 Command = new Command((obj) => {
                     lbl_mydoo.TextColor = Color.FromHex("F5A623");
                     lbl_aboutme.TextColor = Color.FromHex("9B9B9B");
-                    bottom.Source = "mydoo.png";
+                    bottom.Source = "upcoming-doo.png";
                     bottom.Margin = new Thickness(-30, -10, 0, 0);
+                    bottom2.Source = "past-doo.png";
+                    bottom2.Margin = new Thickness(-10, 20, 0, 0);
                 })
             });
             lbl_aboutme.TextColor = Color.FromHex("F5A623");
@@ -99,6 +104,7 @@ namespace WeDoo
             mainlayout.Children.Add(segmentLayout);
 
             mainlayout.Children.Add(bottom);
+            mainlayout.Children.Add(bottom2);
             contentPage.Content = mainlayout;
 
             return contentPage;
